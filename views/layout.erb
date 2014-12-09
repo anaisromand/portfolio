@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anaïs Romand - Infographie</title>
+        <meta name="description" content="Anaïs Romand vous présente ces réalisations en infographie. 
+        Vous pouvez y retrouvez des retouches photos, des affiches ainsi que des logos que j'ai réalisé."/>
+
+    <!--********** CSS **********-->
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/foundation.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <!--********** FONT **********-->   
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Yellowtail' type='text/css'>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway:200' type='text/css'>
+        
+    <!--********** FAVICON **********-->
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <!--*********** META *************-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script src="js/vendor/modernizr.js"></script>
+
+        <script type="text/javascript"> 
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36435934-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+    </head>
+
+    <body>
+        
+        <header class="gradient">  
+            <div class="container">
+                <div class="row">
+                    <div class="large-12 columns">          
+                        <h1>Anaïs Romand</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!--********** MENU **********--> 
+            <nav>
+                <ul class="inline-list">
+                    <li class="active"><a href="/">Infographie</a></li>
+                     <li><a href="/web">Web</a></li>
+                    <!-- <li><a href="photo.html">Photos</a></li> -->
+                    <li><a href="/a-propos">A propos</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <%= yield %>
+    </body>
+</html>
