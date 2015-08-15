@@ -1,1 +1,76 @@
-<h1>Contact</h1>
+<div class="container" id="content">
+	<div class="row">
+	    <div class="large-8 large-centered columns">
+	        <h2>Contact</h2>
+			
+			<?php
+				$name = $_POST['name'];
+				$email = $_POST['email'];
+				$message = $_POST['message'];
+				$from = 'From: Portfolio'; 
+				$to = 'romand.anais.51@gmail.com'; 
+				$subject = $_POST['subject'];
+				$human = $_POST['human'];
+						
+				$body = "From: $name\n E-Mail: $email\n Message:\n $message";
+							
+				if ($_POST['submit'] && $human == '4') {
+					if($_POST['name'] != '' && $_POST['email'] != '' && $_POST['message'] != '') {
+						if (mail($to, $subject, $body, $from)) { 
+							echo '<p>Votre message a bien été envoyé.</p>';
+						} else { 
+							echo '<p>Une erreur vient de survenir. Revenez en arrière et réessayez.</p>'; 
+						} 
+					} else {
+						echo '<p>Une erreur vient de survenir. Revenez en arrière et réessayez.</p>'; 
+					}				 
+				}
+				else if ($_POST['submit'] && $human != '4') {
+				echo '<p>Vous avez mal répondu à la question anti-spam. Veuillez réessayer.</p>';
+				}
+			?>
+		
+			<form method="post">
+				<div class="row">
+					<div class="large-12 columns">
+						<input name="name" type="text" placeholder="Nom*" required/>
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="large-12 columns">
+						<input name="email" type="email" placeholder="E-mail*" required/>
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="large-12 columns">						
+						<input id="subject" name="subject" type="text" placeholder="Sujet*" required/>  
+					</div>	
+				</div> 
+
+				<div class="row">
+					<div class="large-12 columns">         
+						<textarea name="message" placeholder="Votre message*"></textarea>
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="large-2 columns">    
+						<label for="right-label" class="right inline">2*2 = </label>
+					</div>
+					<div class="large-6 columns">    
+						<input name="human" type="text" id="right-label" placeholder="Votre réponse*" required/>
+					</div>	
+				</div>
+
+				<div class="row">
+					<div class="small-2 small-offset-4 medium-offset-5 small-centered columns">  
+						<button id="submit" name="submit" type="text" value="submit" class="bouton">Envoyer</button>
+					</div>	
+				</div>
+			</form>   
+
+		</div>
+	</div>
+</div>
